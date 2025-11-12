@@ -3,6 +3,7 @@ antonios takos
 Lab 7, accessing data in a file
 Sep 29th, 2025
 """
+
 from lab7_function import *
 
 
@@ -28,7 +29,7 @@ print("\n ---- example 7: appending data into an existing file -----")
 stamp_date("takos.txt")
 
 print("\n ---- EXERCISE -----")
-count_yahoo = email_read("user_email.txt" ,"@yahoo")
-count_gmail = email_read("user_email.txt" ,"@gmail")
-count_hotmail = email_read("user_email.txt" ,"@hotmail")
+count_yahoo = email_read("user_email.txt", "@yahoo")
+count_gmail = email_read("user_email.txt", "@gmail")
+count_hotmail = email_read("user_email.txt", "@hotmail")
 write_report("reportemail.txt", count_gmail, count_yahoo, count_hotmail)

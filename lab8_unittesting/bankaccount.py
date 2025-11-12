@@ -3,6 +3,8 @@ Antonios Takos
 Oct 6, 2025
 Lab 8, unit test, bank account
 """
+
+
 class BankAccount:
     def __init__(self, inital_balance=0):
         self.balance = inital_balance
@@ -21,8 +23,11 @@ class BankAccount:
 
     def get_balance(self):
         return self.balance
+
+
 import unittest
 from bankaccount import BankAccount
+
 
 class TestBankAccount(unittest.TestCase):
 
@@ -35,7 +40,7 @@ class TestBankAccount(unittest.TestCase):
     def test_deposit(self):
         self.account.deposit(100)
         self.assertEqual(self.account.get_balance(), 100)
-    
+
     def test_multiple_deposits(self):
         self.account.deposit(50)
         self.account.deposit(150)
@@ -60,12 +65,17 @@ class TestBankAccount(unittest.TestCase):
     def test_negative_deposit(self):
         with self.assertRaises(ValueError) as context:
             self.account.deposit(-50)
-        self.assertEqual(str(context.exception), "ERROR! Can't deposit a negative amount!!")
-    
+        self.assertEqual(
+            str(context.exception), "ERROR! Can't deposit a negative amount!!"
+        )
+
     def test_negative_withdrawl(self):
         with self.assertRaises(ValueError) as context:
             self.account.withdraw(-20)
-        self.assertEqual(str(context.exception), "ERROR! Can't withdraw a negative amount!!")
+        self.assertEqual(
+            str(context.exception), "ERROR! Can't withdraw a negative amount!!"
+        )
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()

@@ -4,8 +4,6 @@ sep 15, 2025
 lab 5, functions
 """
 
-
-
 """
 - pre-defined function: python library
 - user defined function: create by the programmer
@@ -23,7 +21,7 @@ from lab5_takos_function import *
 print("\n----- Example 1: intro function -----")
 n1 = 2
 n2 = 5
-p = product(n1,n2)
+p = product(n1, n2)
 print(f"The product of {n1} and {n2} is {p}")
 p = product(5)
 print(f"The product is {p}")
@@ -34,7 +32,9 @@ s2 = 3
 hyp = hypotenuse(s1, s2)
 print(f"The hypotenuse is {hyp:0.2f}")
 
-print("\n----- Example 3: function to check if the number is positive, negative or zero. -----")
+print(
+    "\n----- Example 3: function to check if the number is positive, negative or zero. -----"
+)
 c = check_number(-3)
 print(f"The number is {c}")
 c = check_number(5)

@@ -3,13 +3,10 @@ antonios takos
 lab 4, dictionary and functions
 september 10th, 2025
 """
+
 print("----- Example 1: dictionary ------")
 # conctact dictionary with three different users
-contacts = {
-    "Bill" : "718-111-2222",
-    "Martha" : "646-000-3333",
-    "Peter" : "212-000-1111"
-}
+contacts = {"Bill": "718-111-2222", "Martha": "646-000-3333", "Peter": "212-000-1111"}
 print(contacts)
 
 # save the value of a specific key
@@ -53,7 +50,7 @@ print(contacts)
 
 print("----- Example 6: add a new key:value pair in a dictionary ------")
 print(contacts)
-contacts.update({"Lucas":"212-111-1111"})
+contacts.update({"Lucas": "212-111-1111"})
 print(contacts)
 
 print("----- Example 7: return items, keys and values in a dictionary ------")
@@ -78,7 +75,15 @@ for word in word_count_dict:
     print(f"'{word}' appears {word_count_dict[word]}")
 
 print("----- EXERCISE ------")
-users = ["peterpan@yahoo.com","annie@hotmail.com","carl@hotmail.com","martha@gmail.com","cassie@yahoo.com","jouse@hotmail.com","john@hotmail.com"] 
+users = [
+    "peterpan@yahoo.com",
+    "annie@hotmail.com",
+    "carl@hotmail.com",
+    "martha@gmail.com",
+    "cassie@yahoo.com",
+    "jouse@hotmail.com",
+    "john@hotmail.com",
+]
 count_word = []
 
 for sentence in users:
@@ -91,7 +96,7 @@ for count_word in count_word:
         count_word_dict2[count_word] += 1
     else:
         count_word_dict2[count_word] = 1
-        
+
 # print result
 for count_word in count_word_dict2:
     print(f"{count_word} appears {count_word_dict2[count_word]}")

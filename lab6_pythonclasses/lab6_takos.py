@@ -3,17 +3,21 @@ antonios takos
 sep 17th, 2025
 lab 6: objects and classes
 """
+
 print("\n------ Example 1: create a class -----")
+
+
 class Circle(object):
     def __init__(self, radius, color):
         self.radius = radius
         self.color = color
         self.balance = 20000
 
-    #method
+    # method
     def add_radius(self, r):
         self.radius += r
         return self.radius
+
 
 class Rectangle(object):
     def __init__(self, height, width, color):
@@ -24,12 +28,13 @@ class Rectangle(object):
     # method to calculate the area
     def area(self):
         return self.width * self.height
-    
+
     # method to calculate the perimiter
     def perimiter(self):
-        return 2*self.width + 2*self.height
+        return 2 * self.width + 2 * self.height
 
-# creating an instance of the class, which is an object 
+
+# creating an instance of the class, which is an object
 circle1 = Circle(4, "red")
 circle2 = Circle(10, "green")
 
@@ -53,21 +58,29 @@ circle2.add_radius(5)
 print(f"Radius of circle 2 after method add_radius = {circle2.radius}")
 
 # accessing methods in Rectangle
-print(f"The area of the rectangle 1 with width {rectangle1.width} and height {rectangle1.height} is {rectangle1.area()}")
+print(
+    f"The area of the rectangle 1 with width {rectangle1.width} and height {rectangle1.height} is {rectangle1.area()}"
+)
 print(f"The perimiter of rectangle 2 = {rectangle2.perimiter()}")
 
 print("\n ------ EXERCISE -----")
+
+
 class BankAccount(object):
-    def __init__(self, account_number="14234234", account_holder="Antonios Takos", balance=0.0):
+    def __init__(
+        self, account_number="14234234", account_holder="Antonios Takos", balance=0.0
+    ):
         self.account_number = account_number
         self.account_holder = account_holder
         self.balance = balance
+
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
             print(f"Deposited {amount}. New Balance: {self.balance}")
         else:
             print("ERROR. PLEASE ENTER A POSITIVE NUMBER.")
+
     def withdraw(self, amount):
         if 0 < amount <= self.balance:
             self.balance -= amount
@@ -75,7 +88,8 @@ class BankAccount(object):
         else:
             print("INSUFFICENT FUNDS. PLEASE TRY AGAIN LATER.")
 
-#EXAMPLE
+
+# EXAMPLE
 useraccount = BankAccount(14234234, "Antonios Takos")
 account = BankAccount(250.50)
 account.withdraw(700)
